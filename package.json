@@ -2,9 +2,11 @@
   "name": "mongodb-graphql",
   "version": "1.0.0",
   "description": "mongoDB with GraphQL app",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js",
+    "watch": "nodemon --exec npm run start"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,11 @@
   "bugs": {
     "url": "https://github.com/zanchess/MongoDB-GraphQL/issues"
   },
-  "homepage": "https://github.com/zanchess/MongoDB-GraphQL#readme"
+  "homepage": "https://github.com/zanchess/MongoDB-GraphQL#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
