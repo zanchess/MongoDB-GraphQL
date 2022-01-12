@@ -1,0 +1,1 @@
+#Stack: GraphQL, MongoDB, Mongoose
