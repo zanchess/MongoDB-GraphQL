@@ -1,8 +1,7 @@
 const graphql = require('graphql');
-const { resolveConfig } = require('prettier');
 
 
-const {GraphQLObjectType, GraphQLString, GraphQLList, GraphQLSchema} = graphql;
+const {GraphQLObjectType, GraphQLString, GraphQLList, GraphQLSchema, GraphQLID} = graphql;
 
 const movies = [
 	{ _id: '1', description: '123',  directorId: '1', directorName: 'Pulp Fiction', genre: 'Crime' },
@@ -14,7 +13,7 @@ const movies = [
 const MovieType = new GraphQLObjectType({
   name: 'Movie',
   fields: () => ({
-    _id: { type: GraphQLString },
+    _id: { type: GraphQLID },
     name: { type: GraphQLString },
     description: { type: GraphQLString },
     directorId: { type: GraphQLString },
@@ -29,10 +28,10 @@ const Query = new GraphQLObjectType ({
     movie: {
       type: MovieType,
       args: {
-        _id: { type: GraphQLString }
+        _id: { type: GraphQLID }
       },
       resolve(parent, args){
-        return movies.find(movie => movie._id === args._id)
+        return movies.find(movie => movie._id === args._id);
       }
     },
   },
