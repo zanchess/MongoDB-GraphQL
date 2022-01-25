@@ -5,8 +5,7 @@ const { Schema } = mongoose;
 const directorSchema = new Schema({
   _id: String,
   country: String,
-  director: String
+  director: String,
 });
 
 module.exports = mongoose.model('Director', directorSchema);
-

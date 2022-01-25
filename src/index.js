@@ -7,10 +7,13 @@ require('dotenv').config();
 
 const app = express();
 
-app.use('/graphql', graphqlHTTP({
-  schema,
-  graphiql: true,
-}));
+app.use(
+  '/graphql',
+  graphqlHTTP({
+    schema,
+    graphiql: true,
+  })
+);
 
 const port = process.env.PORT || 3001;
 const mongoDBUri = process.env.DATABASE_URL || '';

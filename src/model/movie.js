@@ -9,8 +9,7 @@ const movieSchema = new Schema({
   rating: Number,
   description: String,
   directorId: String,
-  directorName: String
+  directorName: String,
 });
 
 module.exports = mongoose.model('Movie', movieSchema);
-
