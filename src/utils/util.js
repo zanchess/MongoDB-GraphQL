@@ -1,6 +1,6 @@
-let string = "string";
+let string = 'string';
 
-function showString () {
+function showString() {
   return string;
 }
 
